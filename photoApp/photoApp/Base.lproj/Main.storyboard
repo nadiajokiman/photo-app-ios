@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="photoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="62A-3C-6M9">
+                                <rect key="frame" x="-68.5" y="69" width="512" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="512" id="0CI-rt-IlF"/>
+                                    <constraint firstAttribute="height" constant="63" id="HYA-zW-LIU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G R O U N D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sId-fs-hDh">
+                                <rect key="frame" x="133" y="167" width="109" height="17"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QOW-X0-XNB">
+                                <rect key="frame" x="62.5" y="218" width="250" height="285"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="FcV-qO-tyw"/>
+                                    <constraint firstAttribute="height" constant="285" id="YGb-G0-gFx"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fkJ-ap-emD">
+                                <rect key="frame" x="131.5" y="540" width="112" height="87"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3D-TB-DZx">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="29"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="CAMERA">
+                                            <color key="titleColor" red="0.1739178113" green="0.42106541450000001" blue="0.13939044649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MLn-eS-gWF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqo-ee-trS">
+                                        <rect key="frame" x="0.0" y="29" width="112" height="29"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="SAVE PHOTO">
+                                            <color key="titleColor" red="0.1739178113" green="0.42106541450000001" blue="0.13939044649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="savePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TSH-33-ZWS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-rB-UcO">
+                                        <rect key="frame" x="0.0" y="58" width="112" height="29"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="GALLERY">
+                                            <color key="titleColor" red="0.1739178113" green="0.42106541450000001" blue="0.13939044649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="K0f-YP-FGn" kind="show" id="CHa-4i-Ckg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6922953136707144" green="0.7474902849740932" blue="0.57561091477773318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QOW-X0-XNB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="27" id="0OV-7f-a6r"/>
+                            <constraint firstItem="62A-3C-6M9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-233" id="3aD-As-M2p"/>
+                            <constraint firstItem="sId-fs-hDh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="42O-Jc-mTM"/>
+                            <constraint firstItem="sId-fs-hDh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-158" id="9b2-kt-YXB"/>
+                            <constraint firstItem="sId-fs-hDh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DON-3F-ubm"/>
+                            <constraint firstItem="62A-3C-6M9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FhG-2p-99a"/>
+                            <constraint firstItem="QOW-X0-XNB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I0O-XK-5H3"/>
+                            <constraint firstItem="fkJ-ap-emD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RF0-4D-2s5"/>
+                            <constraint firstItem="fkJ-ap-emD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="250" id="StR-0a-0uO"/>
+                            <constraint firstItem="62A-3C-6M9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rs3-qQ-m3K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainImage" destination="QOW-X0-XNB" id="PCh-4W-4Cd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="115.59220389805098"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="0kv-tr-a3T">
+            <objects>
+                <viewController id="K0f-YP-FGn" customClass="GalleryViewController" customModule="photoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0yH-ka-HeP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G A L L E R Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4X1-Ju-qCi">
+                                <rect key="frame" x="128" y="103" width="119" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="bth-Vf-jeu"/>
+                                    <constraint firstAttribute="width" constant="119" id="oC9-dd-hbA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <color key="textColor" red="0.69229531369999997" green="0.74749028500000003" blue="0.57561091480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOL-FT-EHw">
+                                <rect key="frame" x="305" y="618" width="54" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="dIv-eq-gVy"/>
+                                    <constraint firstAttribute="width" constant="54" id="xvB-y5-v2u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <state key="normal" title="HOME">
+                                    <color key="titleColor" red="0.69229531369999997" green="0.74749028500000003" blue="0.57561091480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="wFp-DM-v3m"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K2S-63-cRc">
+                                <rect key="frame" x="62.5" y="221" width="250" height="285"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="285" id="Hb7-8q-svL"/>
+                                    <constraint firstAttribute="width" constant="250" id="KbN-qD-eZh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="285" id="Uxu-Vp-XeV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="xM3-BV-lO5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1739178113" green="0.42106541450000001" blue="0.13939044649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4X1-Ju-qCi" firstAttribute="centerX" secondItem="0yH-ka-HeP" secondAttribute="centerX" id="3qd-AG-dCX"/>
+                            <constraint firstItem="K2S-63-cRc" firstAttribute="centerY" secondItem="0yH-ka-HeP" secondAttribute="centerY" constant="30" id="Fnw-tR-gks"/>
+                            <constraint firstItem="4X1-Ju-qCi" firstAttribute="centerY" secondItem="0yH-ka-HeP" secondAttribute="centerY" constant="-222" id="RCE-Z3-QH9"/>
+                            <constraint firstItem="OOL-FT-EHw" firstAttribute="centerY" secondItem="0yH-ka-HeP" secondAttribute="centerY" constant="299" id="ao1-vZ-jqh"/>
+                            <constraint firstItem="K2S-63-cRc" firstAttribute="centerX" secondItem="0yH-ka-HeP" secondAttribute="centerX" id="hU5-ln-CLk"/>
+                            <constraint firstItem="OOL-FT-EHw" firstAttribute="centerX" secondItem="0yH-ka-HeP" secondAttribute="centerX" constant="144.5" id="y5o-1B-Jhq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uJF-hW-2cQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="galleryImageView" destination="K2S-63-cRc" id="Bvu-ze-1aO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hds-tg-FAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="512" height="512"/>
+    </resources>
+</document>
