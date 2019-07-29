@@ -1,2 +1,2 @@
-# randomize-app-ios
-[PROJECT] application using randomized method with Xcode
+# photo-app-ios
+[PROJECT] Using Xcode to build an application that is able to take and save pictures
